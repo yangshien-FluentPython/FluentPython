@@ -52,12 +52,15 @@ def func_methodcaller(s):
 
 
 print fact_mul(10)
+print reduce(operator.mul, range(1, 11))
 
 print fact_itemgetter(2)
+print sorted(metro_data, key=lambda x: x[2], reverse=True)
 
 cc_name = operator.itemgetter(1, 0)
 for i in metro_data:
     print (cc_name(i))
+print [operator.itemgetter(1, 0)(i) for i in metro_data]
 
 fact_attrgetter()
 
